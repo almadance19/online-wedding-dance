@@ -219,51 +219,75 @@
                                 </div> 
                             </div>
                         </div>
-                        <div class="wpo-contact-title">
-                            <h2>Have Any Question?</h2>
-                            <p>It is a long established fact that a reader will be distracted
-                                content of a page when looking.</p>
-                        </div>
-                        <div class="wpo-contact-form-area">
-                            <form method="post" class="contact-validation-active" id="contact-form-main">
-                                <div>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name*">
-                                </div>
-                                <div>
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email*">
-                                </div>
-                                <div>
-                                    <input type="text" class="form-control" name="adress" id="adress" placeholder="Adress">
-                                </div>
-                                <div>
-                                    <select name="service" class="form-control">
-                                        <option disabled="disabled" selected="">Services</option>
-                                        <option>Photography</option>
-                                        <option>The Rehearsal Dinner</option>
-                                        <option>The Afterparty</option>
-                                        <option>Videographers</option>
-                                        <option>Perfect Cake</option>
-                                        <option>All Of The Above</option>
-                                    </select>
-                                </div>
-                                <div class="fullwidth">
-                                    <textarea class="form-control" name="note"  id="note" placeholder="Message..."></textarea>
-                                </div>
-                                <div class="submit-area">
-                                    <button type="submit" class="theme-btn-s4">Get in Touch</button>
-                                    <div id="loader">
-                                        <i class="ti-reload"></i>
-                                    </div>
-                                </div>
-                                <div class="clearfix error-handling-messages">
-                                    <div id="success">Thank you</div>
-                                    <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>                
                 </div>
             </div> <!-- end container -->
+        </section>
+        <section class="wpo-contact-section section-padding pt-0">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col col-xl-4 col-lg-3 col-md-3 col-12">
+                        <div class="contact-img">
+                            <img src="assets/images/Wedding Foto Square/1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 col-lg-6 col-md-6 col-12">
+                        <div class="wpo-contact-section-wrapper">
+                            <div class="wpo-contact-form-area">
+                                <div class="wpo-section-title">
+                                    <h4>Lets Talk</h4>
+                                    <h2>Make An Inquiry</h2>
+                                </div>
+                                <form method="post" class="contact-validation-active" id="contact-form-main">
+                                    <div>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                                    </div>
+                                    <div>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="date">
+                                        <input class="form-control" name="date" autocomplete="off" type="text" id="datepicker" placeholder="Wedding Date">
+                                    </div>
+                                    <div>
+                                        <select name="topic" class="form-control last" id="topic">
+                                            <option disabled="disabled" selected>Topic</option>
+                                            <option>Wedding Dance Choreography</option>
+                                            <option>Wedding Dance Group Classes</option>
+                                            <option>Wedding Dance Privat Classes</option>
+                                            <option>Online Dance Classes</option>
+                                            <option>Wedding Dance Choreography Online</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <textarea class="form-control" name="message" id="message" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="submit-area">
+                                        <button type="submit" class="theme-btn-s3">Send An Inquiry</button>
+                                        <div id="c-loader">
+                                            <i class="ti-reload"></i>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix error-handling-messages">
+                                        <div id="success">Thank you. You will receive an Email from info@alma-dance.de. Check also your spam folder.</div>
+                                        <div id="error">Error occurred while sending email. Please try again later.</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="vector-1">
+                                <img src="assets/images/contact/1.png" alt="">
+                            </div>
+                            <div class="vector-2">
+                                <img src="assets/images/contact/2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-xl-4 col-lg-3 col-md-3 col-12">
+                        <div class="contact-img">
+                            <img src="assets/images/Wedding Foto Square/2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- end wpo-contact-pg-section -->
 
@@ -344,6 +368,46 @@
     <script src="assets/js/jquery-plugin-collection.js"></script>
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form-main');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const date = document.getElementById('datepicker').value;
+                const topic = document.getElementById('topic').value;
+                const message = document.getElementById('message').value;
+    
+                const data = JSON.stringify([name, message, email, "weddingdance"]);
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyo17G7rgg2DTVPjtwi5KAqAiZXUxt4FLv55VXNVHY8TWXTn70HE8hxK5ssRz6K4qw/exec';
+    
+                fetch(scriptURL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: new URLSearchParams({ data: data })
+                })
+                .then(response => response.json())
+                .then(response => {
+                    if (response.status === 'success') {
+                        document.getElementById('success').style.display = 'block';
+                        document.getElementById('error').style.display = 'none';
+                    } else {
+                        document.getElementById('success').style.display = 'none';
+                        document.getElementById('error').style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('success').style.display = 'none';
+                    document.getElementById('error').style.display = 'block';
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
