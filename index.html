@@ -678,7 +678,7 @@
                                     <div class="wpo-pricing-bottom-text">
                                         <ul>
                                             <li>20‑min online assessment</li>
-                                            <li>Custom choreography to your song (with explanation)</li>
+                                            <li>Custom choreography to your song (online with explanation)</li>
                                             <li>1 hour private in‑person lesson</li>
                                             <li style="font-size:0.9rem; color:#888;">Extra private lessons: +100 € / hour</li>
                                         </ul>
@@ -1221,8 +1221,8 @@
                 const topic = document.getElementById('topic').value;
                 const message = document.getElementById('message').value;
     
-                const data = JSON.stringify([name, message, email, topic, date]);
-                const scriptURL = 'https://script.google.com/macros/s/AKfycby0bgJuGUwB4ltdEHfAyJed14jHiL4_o1mRU6lvl9UfY2iIKN-Q7az_avwKPFYkyTs/exec';
+                const data = JSON.stringify([name, message, email, "weddingdance"]);
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbzdNK8Z1xehHrxoadBUNRjyVnncSrczu2-CDw65x3WMiWr78xqKkqX7E6mbvcfxkT0/exec';
     
                 fetch(scriptURL, {
                     method: 'POST',
@@ -1233,7 +1233,7 @@
                 })
                 .then(response => response.json())
                 .then(response => {
-                    if (response.status === 'success') {
+                    if (response.status === 'received') {
                         document.getElementById('success').style.display = 'block';
                         document.getElementById('error').style.display = 'none';
                     } else {

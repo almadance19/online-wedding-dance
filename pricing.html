@@ -24,15 +24,19 @@
     <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
     <link href="assets/css/jquery-ui.css" rel="stylesheet">
     <link href="assets/sass/style.css" rel="stylesheet">
+    
+    <!-- ============================================================ -->
+    <!-- ✅ UPDATED: Structured Data – OfferCatalog with all 5 packages -->
+    <!-- ============================================================ -->
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
-          "@type": "Service", // Or "Offer" if you're primarily selling specific packages
-          "name": "Wedding Dance Frankfurt Pricing", // Name of your service/offer
-          "description": "Our wedding dance lesson pricing and packages.", // Description of your pricing
-          "url": "https://wedding-dance-frankfurt.de/pricing.html", // URL of your pricing page
-          "image": "https://wedding-dance-frankfurt.de/assets/images/Wedding Foto Square/6.png", // Featured image for the pricing page
-          "provider": { // Important: Who provides the service?
+          "@type": "Service",
+          "name": "Wedding Dance Frankfurt Pricing",
+          "description": "Our wedding dance lesson pricing and packages.",
+          "url": "https://wedding-dance-frankfurt.de/pricing.html",
+          "image": "https://wedding-dance-frankfurt.de/assets/images/Wedding%20Foto%20Square/6.png",
+          "provider": {
             "@type": "Organization",
             "name": "Wedding Dance Frankfurt",
             "logo": {
@@ -40,7 +44,7 @@
               "url": "https://wedding-dance-frankfurt.de/assets/logo.webp"
             }
           },
-          "hasOfferCatalog": { // If you have multiple packages/offers
+          "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Wedding Dance Packages",
             "itemListElement": [
@@ -48,13 +52,13 @@
                 "@type": "ListItem",
                 "position": 1,
                 "item": {
-                  "@type": "Offer", // Or "Service" if less specific
-                  "name": "Basic Wedding Dance Package", // Name of the package
-                  "description": "Description of the basic package.",
-                  "priceCurrency": "EUR", // Currency
-                  "price": "370", // Price (numerical value)
-                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=basic&price=370", // Link to the specific package on the page (optional anchor link)
-                  "availability": "https://schema.org/InStock" // Or "PreOrder", "OutOfStock", etc.
+                  "@type": "Offer",
+                  "name": "Basic Wedding Dance Package",
+                  "description": "1 Original Choreography, 3 Private Lessons, Coaching before performance",
+                  "priceCurrency": "EUR",
+                  "price": "370",
+                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=basic&price=370",
+                  "availability": "https://schema.org/InStock"
                 }
               },
               {
@@ -63,79 +67,106 @@
                 "item": {
                   "@type": "Offer",
                   "name": "Standard Wedding Dance Package",
-                  "description": "Description of the premium package.",
+                  "description": "1 Original Choreography, 3 Private Lessons, 1 Month Group Classes, Coaching before performance",
                   "priceCurrency": "EUR",
                   "price": "400",
-                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=standard&price=370&valid=1",
+                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=standard&price=400&valid=1",
                   "availability": "https://schema.org/InStock"
                 }
               },
               {
                 "@type": "ListItem",
-                "position": 2,
+                "position": 3,
                 "item": {
                   "@type": "Offer",
                   "name": "Pro Wedding Dance Package",
-                  "description": "Description of the premium package.",
+                  "description": "1 Original Choreography, 4 Private Lessons, 1 Month Group Classes, Coaching before performance",
                   "priceCurrency": "EUR",
                   "price": "450",
-                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=luxury&price=480&valid=1",
+                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=pro&price=450&valid=1",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "Offer",
+                  "name": "Luxury Wedding Dance Package",
+                  "description": "1 Original Choreography, 4 Private Lessons, 2 Months Group Classes, Coaching before performance",
+                  "priceCurrency": "EUR",
+                  "price": "480",
+                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=luxury&price=480&valid=2",
+                  "availability": "https://schema.org/InStock"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "Offer",
+                  "name": "Hybrid Wedding Dance Package",
+                  "description": "20-min online assessment, custom choreography to your song, 1 hour private lesson",
+                  "priceCurrency": "EUR",
+                  "price": "250",
+                  "url": "https://wedding-dance-frankfurt.de/checkout.html?plan=hybrid&price=250&valid=0",
                   "availability": "https://schema.org/InStock"
                 }
               }
-
-
             ]
           }
         }
-        </script>
-        <!-- Meta Pixel Code -->
-         <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2615825328608070');
-    fbq('track', 'PageView');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2615825328608070');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2615825328608070&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=2615825328608070&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '329457332873799');
-    fbq('track', 'PageView');
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '329457332873799');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=329457332873799&ev=PageView&noscript=1"
+        src="https://www.facebook.com/tr?id=329457332873799&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-546QRSQV');</script>
-            <!-- End Google Tag Manager -->
-        </head>
-        
-        <body>
-         <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-546QRSQV"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) --> 
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-546QRSQV');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-546QRSQV"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
@@ -152,6 +183,7 @@
             </div>
         </div>
         <!-- end preloader -->
+
         <!-- Start header -->
         <header id="header">
             <div class="wpo-site-header wpo-header-style-1" id="sticky-header">
@@ -193,30 +225,10 @@
                                                 <li><a href="about.html">About</a></li>
                                                 <li><a href="wedding-dance-frankfurt.html">Wedding Dance Frankfurt</a></li>
                                                 <li><a href="rsvp.html">Location</a></li>
-                                                <!-- <li class="menu-item-has-children">
-                                                    <a href="service.html">Serevice</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="service.html">Serevice</a></li>
-                                                        <li><a href="service-s2.html">Serevice S2</a></li>
-                                                        <li><a href="service-s3.html">Serevice S3</a></li>
-                                                        <li><a href="service-single.html">Serevice Single</a></li>
-                                                    </ul>
-                                                </li> -->
                                                 <li><a href="pricing.html">Pricing</a></li>
                                                 <li><a href="https://alma-dance-frankfurt.de/home.html">Dance School</a></li>
                                             </ul>
                                         </li>
-                                        <!-- <li class="menu-item-has-children">
-                                            <a href="portfolio-grid.html">Portfolio</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="portfolio-grid.html">Portfolio Grid</a></li>
-                                                <li><a href="portfolio-masonary.html">Portfolio Masonary</a></li>
-                                                <li><a href="portfolio-masonary-s2.html">Portfolio Masonary S2</a></li>
-                                                <li><a href="portfolio-masonary-s3.html">Portfolio Masonary S3</a></li>
-                                                <li><a href="portfolio-masonary-s4.html">Portfolio Masonary S4</a></li>
-                                                <li><a href="portfolio-single.html">Portfolio Single</a></li>
-                                            </ul>
-                                        </li> -->
                                         <li><a href="shop.html">Shop</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <li><a href="blog.html">Blog</a></li>
@@ -226,17 +238,7 @@
                             <div class="col-lg-2 col-md-2 col-2">
                                 <div class="header-right">
                                     <div class="header-search-form-wrapper">
-                                        <!-- <div class="cart-search-contact">
-                                            <button class="search-toggle-btn"><i class="fi flaticon-search"></i></button>
-                                            <div class="header-search-form">
-                                                <form>
-                                                    <div>
-                                                        <input type="text" class="form-control" placeholder="Search here...">
-                                                        <button type="submit"><i class="fi flaticon-search"></i></button>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div> -->
+                                        <!-- search placeholder -->
                                     </div>
                                     <div class="mini-cart">
                                         <button class="cart-toggle-btn"> <i class="fi flaticon-wedding"></i>
@@ -250,18 +252,7 @@
                                                         <span class="mini-cart-item-price">Deutsch</span>
                                                     </div>
                                                 </div>
-                                                <!-- <div class="mini-cart-item clearfix">
-                                                    <div class="mini-cart-item-image">
-                                                        <a href="shop.html"><img src="assets/images/shop/mini-cart/img-2.jpg" alt></a>
-                                                    </div>
-                                                    <div class="mini-cart-item-des">
-                                                        <a href="shop.html">Bridal Flower</a>
-                                                        <span class="mini-cart-item-price">$13.25 x 2</span>
-                                                        <span class="mini-cart-item-quantity"><a href="#"><i class="ti-close"></i></a></span>
-                                                    </div>
-                                                </div> -->
                                             </div>
-                                            <!-- DATA -->
                                         </div>
                                     </div>
                                 </div>
@@ -272,12 +263,14 @@
             </div>
         </header>
         <!-- end of header -->
+
         <!-- start wpo-page-title -->
         <section class="wpo-banner-section">
             <h1>Pricing</h1>
             <h3>Tailored Programs & Choreographies for you</h3>
         </section>
         <!-- end page-title -->
+
         <!-- start wpo-pricing-section -->
         <section class="wpo-pricing-section section-padding pt-0">
             <div class="container" id="inperson_container">
@@ -288,6 +281,7 @@
                 </div>
                 <div class="wpo-pricing-wrap">
                     <div class="row">
+                        <!-- Basic Package -->
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-pricing-item">
                                 <div class="wpo-pricing-top">
@@ -309,6 +303,8 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Standard Package -->
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-pricing-item">
                                 <div class="wpo-pricing-top">
@@ -326,11 +322,13 @@
                                             <li>1 Month Group Dance Classes</li>
                                             <li>Coaching before your performance</li>
                                         </ul>
-                                        <a class="theme-btn" href="checkout.html?plan=standard&price=370&valid=1">Choose Plan</a>
+                                        <a class="theme-btn" href="checkout.html?plan=standard&price=400&valid=1">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Pro Package -->
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-pricing-item">
                                 <div class="wpo-pricing-top">
@@ -348,11 +346,13 @@
                                             <li>1 Month Group Dance Classes</li>
                                             <li>Coaching before your performance</li>
                                         </ul>
-                                        <a class="theme-btn" href="checkout.html?plan=luxury&price=480&valid=1">Choose Plan</a>
+                                        <a class="theme-btn" href="checkout.html?plan=pro&price=450&valid=1">Choose Plan</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!-- Luxury Package -->
                         <div class="col col-lg-4 col-md-6 col-12">
                             <div class="wpo-pricing-item">
                                 <div class="wpo-pricing-top">
@@ -375,11 +375,40 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
+
+                        <!-- ========================================================= -->
+                        <!-- ✅ NEW: Hybrid Package (added as fifth card)                -->
+                        <!-- ========================================================= -->
+                        <div class="col col-lg-4 col-md-6 col-12">
+                            <div class="wpo-pricing-item">
+                                <div class="wpo-pricing-top">
+                                    <div class="wpo-pricing-text">
+                                        <h4>Hybrid Package</h4>
+                                        <h2>250 €<span></span></h2>
+                                    </div>
+                                </div>
+                                <div class="shape"><img src="assets/images/pricing/p-shape.svg" alt=""></div>
+                                <div class="wpo-pricing-bottom">
+                                    <div class="wpo-pricing-bottom-text">
+                                        <ul>
+                                            <li>20‑min online assessment</li>
+                                            <li>Custom choreography to your song (online with explanation)</li>
+                                            <li>1 hour private in‑person lesson</li>
+                                            <li style="font-size:0.9rem; color:#888;">Extra private lessons: +100 € / hour</li>
+                                        </ul>
+                                        <a class="theme-btn" href="checkout.html?plan=hybrid&price=250&valid=0">Choose Plan</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Hybrid Package -->
+
+                    </div> <!-- end row -->
+                </div> <!-- end wpo-pricing-wrap -->
+            </div> <!-- end container -->
         </section>
-        <!-- start wpo-pricing-section -->
+        <!-- end wpo-pricing-section -->
+
         <!-- start wpo-partners-section -->
         <section class="wpo-partners-section section-padding">
             <h2 class="hidden">Partners</h2>
@@ -474,15 +503,12 @@
     </div>
     <!-- end of page-wrapper -->
 
-    <!-- All JavaScript files
-    ================================================== -->
+    <!-- All JavaScript files -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins for this template -->
     <script src="assets/js/modernizr.custom.js"></script>
     <script src="assets/js/jquery.dlmenu.js"></script>
     <script src="assets/js/jquery-plugin-collection.js"></script>
-    <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
 </body>
 
